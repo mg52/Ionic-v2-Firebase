@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Show Data</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list #dataList>
+  <ion-item-group>
+  <ion-item-sliding *ngFor="let item of theItems | async" #slidingItem>
+    <button ion-item (click)="openPage(item)">
+      {{item.name}}
+    </button>
+
+    <ion-item-options>
+      <button ion-button color="danger" (click)="delete(slidingItem, item)">
+        Delete
+      </button>
+    </ion-item-options>
+
+  </ion-item-sliding>
+</ion-item-group>
+</ion-list>
+<!--<ul>
+  <li class="text" *ngFor="let item of theItems | async">
+    {{item.name}}
+  </li>
+</ul>-->
+
+</ion-content>

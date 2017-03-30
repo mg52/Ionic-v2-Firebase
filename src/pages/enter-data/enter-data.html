@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Enter Data</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form #dataForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Data Name" [(ngModel)]="data.name" name="dataName" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea rows="6" placeholder="Data Text" [(ngModel)]="data.text" name="dataText" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-textarea>
+      </ion-item>
+      <p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+        Data is required
+      </p>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="saveData(dataForm)" type="submit" block>Save Data</button>
+      </ion-col>
+    </ion-row>
+  </form>
+<p ion-text color="danger" padding-left>{{message}}</p>
+
+<!--<ul>
+  <li class="text" *ngFor="let item of theItems | async">
+    {{item.name}}
+  </li>
+</ul>-->
+
+</ion-content>
