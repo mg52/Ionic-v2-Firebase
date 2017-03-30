@@ -1,6 +1,6 @@
 {
-  "name": "Note_Ionic_V2",
-  "description": "Note_Ionic_V2",
+  "name": "Ionic-v2-Firebase",
+  "description": "Ionic-v2_Firebase",
   "license": "Apache-2.0",
   "scripts": {
     "build": "ionic-app-scripts build",

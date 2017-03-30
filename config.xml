@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.mussky.ionic-2-firebase" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Ionic Conference</name>
+<widget id="com.mussky.ionic-v2-firebase" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Ionic v2 Firebase</name>
   <description>
-        Ionic 2 Demo with Firebase connection and database usage
+        Ionic v2 Firebase Auth and DB Connection Demo
   </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="musskygames@gmail.com" href="https://mussky.com/">
+      Mussky
   </author>
   <content src="index.html"/>
   <access origin="*"/>
