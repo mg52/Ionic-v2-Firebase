@@ -3,7 +3,7 @@
 This is a sample of Ionic v2 and Firebase Auth and DB Connection. 
 I have used [Ionic v2 Conferance App](https://github.com/driftyco/ionic-conference-app) for template.
 
-Other than Firebase, I have used Google Map API for a simple Google Map Demo from Conferance App.
+Other than Firebase, I have used Google Maps API for a simple Google Maps Demo from Conferance App.
 
 ## Getting Started
 
