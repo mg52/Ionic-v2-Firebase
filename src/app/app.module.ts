@@ -23,6 +23,7 @@ export const myFirebaseConfig = {
     apiKey: "-",
     authDomain: "-",
     databaseURL: "-",
+    projectId: "-",
     storageBucket: "-",
     messagingSenderId: "-"
 };

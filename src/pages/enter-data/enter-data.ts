@@ -13,7 +13,7 @@ import { DataDetailPage } from '../data-detail/data-detail';
 export class EnterDataPage {
   selectedItem: any;
   data: {name?: string, text?: string} = {};
-  items: FirebaseListObservable<any[]>;
+  //items: FirebaseListObservable<any[]>;
   theItems: FirebaseListObservable<any[]>;
   uid: string;
   submitted = false;
@@ -23,9 +23,9 @@ export class EnterDataPage {
     public navParams: NavParams, public af: AngularFire, menuCtrl: MenuController,
     public userData: UserData) {
       this.message = '';
-      this.items = af.database.list('/data');
+      //this.items = af.database.list('/data');
       this.selectedItem = navParams.get('item');
-    //this.getUid();
+      //this.getUid();
   }
 
   ngAfterViewInit() {
@@ -41,8 +41,10 @@ export class EnterDataPage {
 
   saveData(form: NgForm) {
     this.submitted = true;
-
-    if (form.valid) {
+	this.userData.getUid().then((uid) => {
+      this.uid = uid;
+      this.theItems = this.af.database.list('/data' + '/' + this.uid);
+	  if (form.valid) {
       this.theItems.push({ name: this.data.name, text: this.data.text })
       .then((val) => {
         this.message = 'Item Saved.';
@@ -52,6 +54,9 @@ export class EnterDataPage {
         this.message = 'Cannot Save The Item.';
       });
     }
+    });
+	
+
   }
 
   openPage(item: any){
